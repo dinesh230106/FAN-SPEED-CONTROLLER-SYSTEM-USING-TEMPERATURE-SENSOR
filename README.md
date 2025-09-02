@@ -1,23 +1,23 @@
-
-# FAN-SPEED-CONTROLLER-SYSTEM-USING-TEMPERATURE-SENSOR
+# DINESH KUMAR A (212223060057)
 # EXP 1(A) FAN SPEED CONTROLLER SYSTEM USING TEMPERATURE SENSOR
 
 # Aim:
-	To measure the Temperature using DHT11/DHT22/TMP36  sensor with Arduino UNO Board/ESP-32 using Tinker CAD.
+	To measure the Temperature using DHT11/DHT22/TMP36  sensor with Arduino UNO Board/ESP-32
+     using Tinker CAD.
 
 # Hardware / Software Tools required:
 	PC/ Laptop with Internet connection
-    Tinker CAD tool (Online)
+  Tinker CAD tool (Online)
 	Arduino UNO Board/ESP-32
 	Temperature Sensor (DHT11/DHT22/TMP36)
 
 # Circuit Diagram:
 
----
-To upload
---
+<img width="964" height="732" alt="Screenshot 2025-09-02 134051" src="https://github.com/user-attachments/assets/518d8b87-d84e-4205-a074-97fffe28c8d5" />
 
-# Procedure // Modify the procedure based on your circuit
+<img width="1164" height="726" alt="Screenshot 2025-09-02 134958" src="https://github.com/user-attachments/assets/70857cf1-e8ba-46cc-961f-c66db004be15" />
+
+# Procedure
 
 Step 1: Set Up the Tinkercad Environment
 1.	Log in to Tinkercad: Open Tinkercad in your web browser and log in to your account.
@@ -57,12 +57,69 @@ Step 7: Save Your Work
 
 # Program
 
----
-To upload
---
+#include <LiquidCrystal.h>
+
+// LCD pin mapping: (RS, E, D4, D5, D6, D7)
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+
+const int tempPin = A0;      // TMP36 output pin
+const int motorPin = 9;      // Motor PWM pin
+const int ledPin = 7;        // LED pin
+
+void setup() {
+  pinMode(motorPin, OUTPUT);
+  pinMode(ledPin, OUTPUT);
+  Serial.begin(9600);
+
+  // Initialize LCD
+  lcd.begin(16, 2);
+  lcd.print("Temp & Motor");
+  delay(2000);
+  lcd.clear();
+}
+
+void loop() {
+  int sensorValue = analogRead(tempPin);
+  
+  // Convert TMP36 reading to temperature in Celsius
+  float voltage = sensorValue * (5.0 / 1023.0);
+  float temperatureC = (voltage - 0.5) * 100.0;
+
+  // Map temperature to PWM speed (20°C = stop, 40°C = full speed)
+  int motorSpeed = map(temperatureC, 20, 40, 0, 255);
+  motorSpeed = constrain(motorSpeed, 0, 255);
+
+  analogWrite(motorPin, motorSpeed);
+
+  // LED indicator ON if motor running
+  if (motorSpeed > 0) {
+    digitalWrite(ledPin, HIGH);
+  } else {
+    digitalWrite(ledPin, LOW);
+  }
+
+  // Display on Serial Monitor
+  Serial.print("Temperature: ");
+  Serial.print(temperatureC);
+  Serial.print(" C, Motor Speed: ");
+  Serial.println(motorSpeed);
+
+  // Display on LCD
+  lcd.setCursor(0, 0);
+  lcd.print("Temp: ");
+  lcd.print(temperatureC);
+  lcd.print("C   ");
+
+  lcd.setCursor(0, 1);
+  lcd.print("Speed: ");
+  lcd.print(motorSpeed);
+  lcd.print("   ");
+
+  delay(500);
+}
+
 
 # Result
+https://github.com/user-attachments/assets/84b814c4-a8c2-4df0-b5f0-cf488af372e0
 
----
-To upload
---
+
