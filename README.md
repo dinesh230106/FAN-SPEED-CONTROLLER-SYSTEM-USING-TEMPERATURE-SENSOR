@@ -14,7 +14,9 @@ using Tinker CAD.
 # Schematic view:
 
 <img width="964" height="732" alt="Screenshot 2025-09-02 134051" src="https://github.com/user-attachments/assets/518d8b87-d84e-4205-a074-97fffe28c8d5" />
+
 # Circuit Diagram:
+
 <img width="1164" height="726" alt="Screenshot 2025-09-02 134958" src="https://github.com/user-attachments/assets/70857cf1-e8ba-46cc-961f-c66db004be15" />
 
 # Procedure
