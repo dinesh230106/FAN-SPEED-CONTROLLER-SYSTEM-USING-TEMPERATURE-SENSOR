@@ -56,7 +56,7 @@ Step 7: Save Your Work
 
 
 # Program
-
+```
 #include <LiquidCrystal.h>
 
 // LCD pin mapping: (RS, E, D4, D5, D6, D7)
@@ -118,7 +118,7 @@ void loop() {
   delay(500);
 }
 
-
+```
 # Result
 https://github.com/user-attachments/assets/84b814c4-a8c2-4df0-b5f0-cf488af372e0
 
