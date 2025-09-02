@@ -2,14 +2,14 @@
 # EXP 1(A) FAN SPEED CONTROLLER SYSTEM USING TEMPERATURE SENSOR
 
 # Aim:
-	To measure the Temperature using DHT11/DHT22/TMP36  sensor with Arduino UNO Board/ESP-32
-     using Tinker CAD.
+To measure the Temperature using DHT11/DHT22/TMP36  sensor with Arduino UNO Board/ESP-32
+using Tinker CAD.
 
 # Hardware / Software Tools required:
-	PC/ Laptop with Internet connection
-  Tinker CAD tool (Online)
-	Arduino UNO Board/ESP-32
-	Temperature Sensor (DHT11/DHT22/TMP36)
+- PC/ Laptop with Internet connection
+- Tinker CAD tool (Online)
+- Arduino UNO Board/ESP-32
+- Temperature Sensor (DHT11/DHT22/TMP36)
 
 # Circuit Diagram:
 
@@ -40,16 +40,20 @@ o	TMP36 GND (Right Pin) to Breadboard GND Rail: Connect the GND pin of the TMP36
 o	TMP36 Vs (Left Pin) to Breadboard 5V Rail: Connect the Vs pin of the TMP36 sensor to the 5V rail of the breadboard.
 o	Arduino GND to Breadboard GND Rail: Connect a wire from the Arduino GND pin to the ground rail on the breadboard.
 o	Arduino 5V to Breadboard 5V Rail: Connect a wire from the Arduino 5V pin to the power rail on the breadboard.
+
 Step 4: Write the Arduino Code
 1.	Code Editor: Click on the "Code" button at the top of the Tinkercad workspace to open the code editor.
 2.	Set the Coding Mode: Ensure the editor is in "Text" mode to write your code in C/C++.
 3.	Enter the Code: Write the following code to read the temperature from the TMP36 sensor
+   
 Step 5: Simulate the Circuit
 1.	Start Simulation: Click the "Start Simulation" button at the top of the workspace to run the circuit and code.
 2.	Monitor Output: Open the serial monitor by clicking the "Serial Monitor" button to view the temperature readings in both Celsius and Fahrenheit.
+   
 Step 6: Troubleshoot and Refine
 1.	Check Connections: Ensure that all connections are made correctly on the breadboard and the Arduino.
 2.	Adjust Code: If needed, tweak the code to improve accuracy or change the format of the output.
+   
 Step 7: Save Your Work
 1.	Stop Simulation: Click "Stop Simulation" to end the simulation.
 2.	Save the Circuit: Click "Save" to keep your circuit design and code for future use.
