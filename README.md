@@ -122,5 +122,5 @@ void loop() {
 # OUTPUT
 https://github.com/user-attachments/assets/84b814c4-a8c2-4df0-b5f0-cf488af372e0
 
-# RESELT
+# RESULT
 FAN SPEED CONTROLLER SYSTEM USING TEMPERATURE SENSOR USING TINKERCAD EXECUTED SUCCESSfully.
